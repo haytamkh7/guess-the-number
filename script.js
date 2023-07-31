@@ -1,6 +1,6 @@
 window.onload = function() {
     let min = 1;
-    let max = 10;
+    let max = 37;
     let state = 1;
 
     function generateRandomNumber(min, max) {
@@ -14,7 +14,7 @@ window.onload = function() {
 
     function setNewRange() {
         min = 1;
-        max = 10;
+        max = 37;
         document.getElementById('min-range').innerText = `${min}`;
         document.getElementById('max-range').innerText = `${max}`;
     }
