@@ -1,0 +1,45 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 2s ease;
+    font-family: consolas;
+}
+
+.container {
+    text-align: center;
+}
+
+#range-para {
+    font-size: 2em;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#random-number {
+    font-size: 6em;
+    color: white;
+    transition: all 2s ease;
+}
+
+#change-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+}
+
+#change-btn:hover {
+    background-color: white;
+    color: black;
+}
