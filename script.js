@@ -1,7 +1,7 @@
 window.onload = function() {
-    let min = 0;
-    let max = 1000;
-    
+    let min = 1;
+    let max = 10;
+
     function generateRandomNumber(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
     }
@@ -24,8 +24,8 @@ window.onload = function() {
     }
 
     function setNewRange() {
-        min = generateRandomNumber(0, 1000);
-        max = min + generateRandomNumber(0, 1000 - min);
+        min = 1;
+        max = 10;
         document.getElementById('min-range').innerText = `${min}`;
         document.getElementById('max-range').innerText = `${max}`;
     }
