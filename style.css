@@ -43,3 +43,22 @@ body, html {
     background-color: white;
     color: black;
 }
+
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    #range-para {
+        font-size: 3em;
+    }
+
+    #random-number {
+        font-size: 7em;
+    }
+
+    #change-btn {
+        font-size: 2em;
+        padding: 15px 30px;
+    }
+}
