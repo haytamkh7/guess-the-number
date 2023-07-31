@@ -1,6 +1,7 @@
 window.onload = function() {
     let min = 1;
     let max = 10;
+    let state = 1;
 
     function generateRandomNumber(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -31,11 +32,12 @@ window.onload = function() {
         document.getElementById('cover-div').style.display = 'none';
     
         setTimeout(function() {
+            state = state % 10 + 1;
             setNewRange();
             document.getElementById('random-number').style.display = 'none';
             document.getElementById('cover-div').style.display = 'block';
-        }, 1000);
+            document.getElementById('state').innerText = `${state}/10`;
+        }, 2000);
     });
-    
     
 }
