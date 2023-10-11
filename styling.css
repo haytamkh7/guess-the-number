@@ -1,0 +1,939 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Heebo", sans-serif;
+	font-weight: lighter;
+	box-sizing: border-box;
+  }
+  
+  body {
+	background-color: #00BBFE;
+  }
+  
+  .hero {
+	min-height: 100vh;
+	width: 100%;
+	color: #fff;
+	position: relative;
+	margin-bottom: 40px;
+  }
+  
+  nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 20px 8%;
+  }
+  
+  .logo-container {
+	text-align: center;
+  }
+  
+  .logo {
+	width: 200px;
+	cursor: pointer;
+	border-radius: 14px;
+	margin-bottom: 20px;
+  }
+  
+  nav ul {
+	text-align: center;
+	width: 100%;
+  }
+  
+  nav ul li {
+	display: inline-block;
+	list-style: none;
+	margin: 0 20px;
+  }
+  
+  nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 20px;
+	position: relative;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	/* Makes the text all uppercase */
+	letter-spacing: 1px;
+	/* Adds space between letters */
+  }
+  
+  nav ul li a:hover {
+	color: #f1f1f1;
+  }
+  
+  nav ul li a::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+  }
+  
+  nav ul li a:hover::before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+  }
+  
+  .content-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 8%;
+	background-color: #fff;
+	border-radius: 12px;
+	padding: 20px;
+	min-height: 50vh;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	/* Box shadow */
+	max-width: 80%;
+	/* New: Minimize the width */
+	margin: auto;
+	/* New: Center the div */
+  }
+  
+  .image-container {
+	flex: 1;
+	padding: 20px;
+  }
+  
+  .image-container img {
+	max-width: 50%;
+	/* Changed from 80% to 60% */
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+  }
+  
+  .text-container {
+	flex: 1;
+	max-width: 600px;
+	text-align: right;
+	/* This already aligns text to the right */
+	padding: 20px;
+	border-radius: 12px;
+	color: #000000;
+	background: rgba(255, 255, 255, 0.8);
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+	direction: rtl;
+	/* Add this for RTL languages like Hebrew */
+  }
+  
+  .text-container p {
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+	/* Text shadow for a slight depth */
+	font-size: 1em;
+  }
+  
+  .text-container h1 {
+	text-transform: uppercase;
+	/* All uppercase */
+	letter-spacing: 2px;
+	/* Spacing between letters */
+	margin-bottom: 20px;
+	/* Margin at the bottom */
+	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+	/* Text shadow for depth */
+  }
+  
+  .about-us-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	/* Creamy white background */
+	border-radius: 12px;
+	padding: 20px;
+	min-height: 50vh;
+	max-width: 80%;
+	/* Matching the max-width with the content-wrapper */
+	margin: 80px auto;
+	/* Horizontally center the section by setting auto margin to left and right */
+	text-align: center;
+	/* Text-align center will center your text inside */
+	direction: rtl;
+	/* Keep this for RTL languages like Hebrew */
+  }
+  
+  .about-us-wrapper .text-container h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #333;
+	direction: rtl;
+	/* Add this for RTL languages like Hebrew */
+  }
+  
+  .about-us-wrapper .text-container p {
+	font-size: 1.2rem;
+	line-height: 1.7;
+	color: #555;
+	margin-bottom: 20px;
+	direction: rtl;
+	/* Add this for RTL languages like Hebrew */
+  }
+  
+  .contact-us-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	/* Creamy white background */
+	border-radius: 12px;
+	padding: 20px;
+	min-height: 30vh;
+	max-width: 80%;
+	/* Matching the max-width with the content-wrapper */
+	margin: 80px auto;
+	/* Horizontally center the section by setting auto margin to left and right */
+	text-align: center;
+	/* Text-align center will center your text inside */
+	direction: rtl;
+	/* Keep this for RTL languages like Hebrew */
+  }
+  
+  .contact-us-wrapper .text-container h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #333;
+	direction: rtl;
+	/* Add this for RTL languages like Hebrew */
+  }
+  
+  .social-icons {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+  }
+  
+  .social-icons a {
+	font-size: 2rem;
+	color: #333;
+	transition: color 0.3s;
+  }
+  
+  .social-icons .whatsapp:hover {
+	color: rgb(58, 183, 58);
+  }
+  
+  .social-icons .instagram:hover {
+	color: #fd5949;
+  }
+  
+  .social-icons .facebook:hover {
+	color: #3b5998;
+  }
+  
+  .social-icons .tiktok:hover {
+	color: #fe2c55;
+  }
+  
+  .faq-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #fff;
+	border-radius: 12px;
+	padding: 20px;
+	min-height: 50vh;
+	max-width: 80%;
+	margin: 80px auto;
+	text-align: center;
+	direction: rtl;
+  }
+  
+  .faq-wrapper .text-container h1 {
+	font-size: 2.5rem;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 2px;
+	color: #333;
+  }
+  
+  .faq-wrapper .text-container ul {
+	list-style-type: none;
+	padding: 0 20px;
+	text-align: center;
+	/* Center-align the list */
+  }
+  
+  .faq-wrapper .text-container ul li {
+	margin: 10px 0;
+	padding: 10px;
+	border-bottom: 1px solid #444;
+	font-size: 1.2rem;
+	line-height: 1.7;
+	color: #555;
+	direction: rtl;
+  }
+  
+  .faq-wrapper .text-container ul li strong {
+	font-weight: bold;
+	cursor: pointer;
+	display: inline-block;
+	margin-bottom: 5px;
+	text-align: center;
+	/* Center-align the question */
+  }
+  
+  .faq-wrapper .text-container ul li p {
+	display: none;
+	font-size: 1.2rem;
+	line-height: 1.7;
+	color: #555;
+	direction: rtl;
+	text-align: center;
+	/* Center-align the answer */
+	transition: all 0.3s;
+  }
+  
+  h1,
+  h2 {
+	margin-bottom: 20px;
+  }
+  
+  /*Order Section*/
+  #order-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f5f5f5;
+	/* Softened background color */
+	border-radius: 12px;
+	padding: 20px;
+	max-width: 80%;
+	margin: 80px auto;
+	text-align: center;
+	direction: rtl;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+	/* Added shadow for depth */
+  }
+  
+  #order-container .warning {
+	font-size: 1.1rem;
+	/* Slightly increased font size */
+	margin-bottom: 20px;
+	letter-spacing: 1px;
+	/* Adjusted letter spacing */
+	color: #555;
+  }  
+  .order-line {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 15px;
+	width: 100%;
+	border: 1px solid #e0e0e0;
+	/* Border for separation and structure */
+	border-radius: 6px;
+	padding: 10px;
+	/* Additional padding for visual clarity */
+	background-color: #fff;
+  }
+  
+  .type-selector,
+  .subtype-selector,
+  .grams {
+	padding: 8px 12px;
+	font-size: 16px;
+	border: 1px solid #2d2828;
+	border-radius: 4px;
+	width: 150px;
+	/* Fixed width */
+	background-color: #e9f0f5;
+	/* Light blueish background */
+	color: #333;
+	/* Blackish text color */
+  }
+  
+  .line-total {
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 10px;
+	/* Margin for better spacing */
+  }
+  
+  #total-order-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 40px;
+	width: auto;
+	margin-top: 20px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	/* Adjusted shadow for uniformity */
+  }
+  
+  #total-order-container > div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #444;
+	/* Darkened for better contrast with white text */
+	border-radius: 6px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.4rem;
+	border: 2px solid #f5f5f5;
+	/* Softened border color */
+	text-transform: uppercase;
+	padding: 10px 20px;
+	direction: rtl;
+  }
+  
+  .add-line-btn:hover {
+	background-color: #27ae60;
+  }
+  
+  .delete-line-btn:hover {
+	background-color: #e74c3c;
+	/* Adjusted to a slightly different shade */
+  }
+  
+  .add-line-btn {
+	background-color: #3498db;
+	/* Adjusted to a slightly different shade */
+  }
+  
+  .delete-line-btn {
+	background-color: #e74c3c;
+	margin-right: 10px;
+  }
+  
+  #total-order {
+	margin-left: 10px;
+	color: #ffd700;
+  }
+  
+  .warning {
+	color: #333;
+	/* Softened color for better readability */
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-style: italic;
+  }
+  
+  /* Amount/Quantity Container */
+  #quantity-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	margin-top: 20px;
+	width: 100%;
+	padding: 10px;
+	border: 1px solid #e0e0e0;
+	border-radius: 6px;
+	background-color: #fff;
+	font-size: 1.2rem;
+  }
+  
+  /* Label for Amount/Quantity */
+  #quantity-container label {
+	flex-basis: 50%;
+	text-align: right;
+	font-weight: 600;
+	color: #444;
+  }
+  
+  /* Input field for Amount/Quantity */
+  #order-quantity {
+	flex-basis: 50%;
+	padding: 8px 12px;
+	font-size: 1rem;
+	border: 1px solid #2d2828;
+	border-radius: 4px;
+	background-color: #e9f0f5;
+	color: #333;
+	text-align: center;
+	max-width: 100px;
+	/* Limiting the width for better visual */
+  }
+  
+  /* Order Details Section */
+  .order-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #f7f7f7;
+	border-radius: 12px;
+	padding: 20px;
+	max-width: 75%;
+	margin: 40px auto;
+	text-align: center;
+	direction: rtl;
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-details h2 {
+	font-size: 1.5rem;
+	color: #555;
+	font-weight: 600;
+	margin-bottom: 20px;
+  }
+  
+  /* Responsive behavior for smaller screens */
+  @media (max-width: 480px) {
+	#quantity-container {
+	  flex-direction: column;
+	  gap: 5px;
+	}
+  
+	#quantity-container label,
+	#order-quantity {
+	  flex-basis: 100%;
+	  text-align: center;
+	}
+  }
+  
+  /*End Order Section*/
+  /* Your existing styles are intact here... */
+  /* Responsive Breakpoint for smaller devices */
+  @media only screen and (max-width: 768px) {
+	#order-container {
+	  max-width: 95%;
+	  /* Stretching to the edges for maximized space but with a little margin */
+	  margin: 10px auto;
+	  padding: 15px;
+	  /* A bit of padding so content doesn't feel cramped */
+	  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	  /* Slight shadow for depth */
+	}
+  
+	.order-line {
+	  flex-direction: column;
+	  gap: 12px;
+	  /* Consistent spacing between elements */
+	  padding: 8px;
+	  /* Adequate padding for aesthetic spacing */
+	  border-bottom: 1px solid #ddd;
+	  /* Separation between order lines */
+	}
+  
+	.type-selector,
+	.subtype-selector,
+	.grams {
+	  width: 100%;
+	  /* Full width for a unified look */
+	  margin-bottom: 10px;
+	  font-size: 15px;
+	  /* Slightly larger font for better readability */
+	}
+  
+	.line-total {
+	  margin-left: 0;
+	  margin-bottom: 8px;
+	  /* A little separation for visual clarity */
+	  color: #3498db;
+	  /* Highlight the total using a different color */
+	}
+  
+	.add-line-btn,
+	.delete-line-btn {
+	  width: 48%;
+	  margin: 4px 1%;
+	  font-size: 15px;
+	  border-radius: 8px;
+	}
+  
+	#total-order-container > div {
+	  width: 70%;
+	  margin-top: 15px;
+	  background-color: #2c3e50;
+	  color: #ecf0f1;
+	}
+
+	#total-order-container > #shipping-container {
+		width: 100%;
+		margin-top: 15px;
+		background-color: #2c3e50;
+		color: #ecf0f1;
+	}
+
+  
+	#total-order-container {
+	  padding: 15px 10px;
+	  background-color: #ecf0f1;
+	  border-radius: 8px;
+	}
+  }
+  
+  /* Close Button */
+  .close-btn {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+  }
+  
+  /* Cart Modal */
+  .cart-modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #f5f5f5;
+	padding: 20px;
+	width: 50%;
+	max-height: 80%;
+	/* Adjust this value as needed */
+	overflow-y: auto;
+	/* Use lowercase for property names */
+	box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	/* Apply border radius to all corners */
+	text-align: center;
+	/* Center the content horizontally */
+	direction: rtl;
+	animation: slideIn 0.3s ease-out;
+  }
+  
+  .cart-modal h3 {
+	text-align: center;
+	font-weight: bold;
+	color: #555;
+	margin-top: 10px;
+	margin-bottom: 30px;
+  }
+  
+  .cart-modal-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #ddd;
+	padding-bottom: 10px;
+  }
+  
+  .cart-modal .close-btn {
+	font-size: 1.6em;
+	cursor: pointer;
+	background: none;
+	border: none;
+	padding: 5px 10px;
+	color: #aaa;
+	transition: color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .cart-modal .close-btn:hover {
+	color: #888;
+	transform: scale(1.1);
+  }
+  
+  .cart-modal-item {
+	margin: 15px 0;
+	padding: 5px;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.1);
+	transition: background 0.2s ease;
+  }
+  
+  .cart-modal-item h3 {
+	margin: 0 auto;
+	/* centers the text horizontally */
+	text-align: center;
+	/* ensures text remains centered */
+	text-align: center;
+	color: #555;
+  }
+  
+  .cart-modal-item table {
+	width: 100%;
+	border-collapse: collapse;
+  }
+  
+  .cart-modal-item table th,
+  .cart-modal-item table td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: center;
+  }
+  
+  .cart-modal-item:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Cart Icon with Counter */
+  .cart-container {
+	position: relative;
+  }
+  #cart-icon {
+	font-size: 1.4em;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+  }
+  
+  #cart-icon:hover {
+	transform: scale(1.2);
+  }
+  
+  #cart-counter {
+	position: absolute;
+	top: -5px;
+	right: -10px;
+	background-color: #af4261;
+	color: white;
+	border-radius: 50%;
+	font-size: 0.8em;
+	padding: 2px 6px;
+	text-align: center;
+  }
+  
+  /* User Information Modal Styles */
+  body.modal-open {
+	overflow: hidden;
+  }
+  
+  #userModal {
+	display: none;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 400px;
+	z-index: 1000;
+	display: flex;
+	justify-content: center; /* Centering content horizontally */
+	align-items: center; /* Centering content vertically */
+  }
+  #userModal .user-modal-content {
+	text-align: center;
+	background-color: #001f3f;
+	padding: 20px;
+	border-radius: 15px;
+	width: 100%;
+	max-width: 350px;
+	overflow-y: auto;
+  }
+  
+  #userModal label {
+	color: #fff;
+	display: block;
+	margin-bottom: 15px;
+  }
+  
+  #userModal input[type="text"],
+  #userModal textarea {
+	width: 100%;
+	padding: 10px;
+	margin-top: 5px;
+	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	resize: none;
+  }
+  
+  #userModal button {
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	margin-top: 10px;
+  }
+  
+  #submit-user-info {
+	background-color: #4caf50;
+	color: white;
+  }
+  
+  #submit-user-info:hover {
+	background-color: #45a049;
+  }
+  
+  #close-user-modal {
+	background-color: #f44336;
+	color: white;
+  }
+  
+  #close-user-modal:hover {
+	background-color: #da190b;
+  }
+  
+  @media (max-height: 500px) {
+	#userModal .user-modal-content {
+	  height: 70vh;
+	  overflow-y: scroll;
+	}
+  }
+  
+  /* Animation */
+  @keyframes slideIn {
+	0% {
+	  opacity: 0;
+	}
+  
+	100% {
+	  opacity: 1;
+	}
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 768px) {
+	.cart-modal {
+	  /* max-width: 90%;
+		  max-height: 90%; */
+	  height: 70vh;
+	  width: 85%;
+	}
+  }
+  /* Responsive design */
+  @media (max-width: 768px) {
+	.content-wrapper {
+	  flex-direction: column;
+	}
+  
+	.image-container,
+	.text-container {
+	  flex: 1;
+	  max-width: 100%;
+	  text-align: center;
+	  margin-bottom: 20px;
+	}
+  
+	.image-container img {
+	  max-width: 100%;
+	  /* For smaller screens, allow image to take full width */
+	}
+  
+	.text-container p {
+	  font-size: 1.2rem;
+	}
+  
+	nav ul li {
+	  margin: 0 10px;
+	  /* Reduce margin */
+	}
+  
+	nav ul li a {
+	  padding: 5px 10px;
+	  /* Reduce padding */
+	  font-size: 0.8em;
+	  /* Reduce font size */
+	}
+  
+	/* Reset hover effects */
+	nav ul li a::before {
+	  display: none;
+	}
+  
+	/* Add this to make the underline always visible for current page on small screens */
+	nav ul li a.current::before {
+	  display: block;
+	  width: 100%;
+	}
+  
+	.about-us-wrapper {
+	  flex-direction: column;
+	  margin-top: 0;
+	  margin: 20px auto;
+	  /* Horizontally center the section on smaller screens */
+	}
+  }
+  
+  @media (min-width: 769px) {
+	.text-container p {
+	  font-size: 2rem;
+	}
+  }
+  
+  /* Base styles */
+  #add-to-cart,
+  #new-meal,
+  #send-cart-to-whatsapp,
+  #secondary-cart-icon {
+	margin: 10px;
+	border-radius: 20px;
+	padding: 12px 20px;
+	font-size: 16px;
+	border: none;
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;
+  }
+  
+  #add-to-cart:hover {
+	opacity: 80%;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: #fff;
+	transform: translateY(-2px);
+  }
+
+  #secondary-cart-icon:hover {
+    opacity: 80%;
+    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    transform: translateY(-2px);
+	}
+	#secondary-cart-icon {
+		background-color: #4caf50; /* Green */
+		color: white;
+	}
+  
+  #new-meal:hover {
+	opacity: 80%;
+	box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+	color: #fff;
+	transform: translateY(-2px);
+  }
+  
+  #send-cart-to-whatsapp:hover {
+	box-shadow: 0px 15px 20px rgba(233, 233, 233, 0.4);
+	color: #fff;
+	transform: translateY(-2px);
+  }
+  
+  /* Specific styles for each button */
+  
+  #add-to-cart {
+	background-color: #4caf50; /* Green */
+	color: white;
+  }
+  
+  #new-meal {
+	background-color: #2196f3; /* Blue */
+	color: white;
+  }
+  
+  #send-cart-to-whatsapp {
+	background-color: #128c7e;
+	color: white;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+	#add-to-cart,
+	#new-meal,
+	#send-cart-to-whatsapp,
+	#secondary-cart-icon {
+	  width: 90%;
+	  padding: 15px 0;
+	  margin: 10px auto;
+	  display: block;
+	}
+  }
